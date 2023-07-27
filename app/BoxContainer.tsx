@@ -25,8 +25,7 @@ export function BoxContainer({children}: Props) {
                     border: '2px solid #FFDE59',
                     flex: 1,
                     // flexBasis: '90%',
-                    py: 5,
-                    px: 5
+                    p: 5
                 }}
                 bgcolor='background.paper'
             >

@@ -19,7 +19,7 @@ export const theme = createTheme({
             light: '#001135',
             main: '#FFDE59',
             dark: '#FFDE59',
-            contrastText: '#000000',
+            contrastText: '#ffffff',
         },
         background: {
             default: '#1E293B',
@@ -29,6 +29,7 @@ export const theme = createTheme({
             primary: 'rgba(255,255,255,1)',
             secondary: '#94A3B8',
         },
+
     },
     typography: {
         fontFamily: epilogue.style.fontFamily
