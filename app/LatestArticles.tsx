@@ -1,4 +1,4 @@
-import React, {ReactElement} from "react";
+import React from "react";
 import {Box} from "@mui/system";
 import {Typography} from "@mui/material";
 import {InnerBoxContainer} from "@/app/InnerBoxContainer";
@@ -6,38 +6,6 @@ import {BoxContainer} from "@/app/BoxContainer";
 import Image from "next/image";
 
 export default function LatestArticles() {
-
-    const DevIcon = (name: string) => (<Box m={1}><Image
-        src={`/${name}.svg`}
-        alt={name}
-        height={'35'}
-        width={'35'}
-        priority
-        style={{display: 'inline-block'}}
-    /></Box>);
-
-    const Subsection = (props: { id: string, title: string, description: string[], icons: string[][] }) => {
-        return (
-            <Box id={props.id} flex={1} sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
-                <Box id={`${props.id}-description`} flexBasis={"50%"}>
-                    <Typography variant="h4" sx={{fontWeight: 'bold'}}>{props.title}</Typography>
-                    <Typography color="text.secondary">
-                        <ul>
-                            {props.description.map(d => (<li key={d}>{d}</li>))}
-                        </ul>
-                    </Typography>
-                </Box>
-                <InnerBoxContainer id={`${props.id}-icons`}>
-                    <Box sx={{display: 'flex', flexDirection: 'column'}}>
-                        {props.icons.map(row => (
-                            <Box sx={{display: 'flex'}} key={row[0]}>
-                                {row.map(icon => DevIcon(icon))}
-                            </Box>
-                        ))}
-                    </Box>
-                </InnerBoxContainer>
-            </Box>)
-    }
 
     const Article = () => (
         <InnerBoxContainer id={`title-of-article`}>
