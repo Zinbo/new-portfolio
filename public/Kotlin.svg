@@ -1,0 +1,32 @@
+<svg width="73" height="73" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Kotlin">
+<g id="g5354">
+<path id="XMLID_2_" d="M6.30548 67.3132L37.0019 36.6168L67.4944 67.3132H6.30548Z" fill="url(#paint0_linear_1_384)"/>
+<path id="polygon5337" d="M6.30548 6.12427H37.0019L6.30548 39.2683V6.12427Z" fill="url(#paint1_linear_1_384)"/>
+<path id="polygon5352" d="M37.0019 36.6167L67.4944 6.12427H37.0019L6.30548 38.4524V67.3132L37.0019 36.6167Z" fill="url(#paint2_linear_1_384)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1_384" x1="22.5811" y1="81.6052" x2="51.4902" y2="52.696" gradientUnits="userSpaceOnUse">
+<stop offset="0.09677" stop-color="#0095D5"/>
+<stop offset="0.3007" stop-color="#238AD9"/>
+<stop offset="0.6211" stop-color="#557BDE"/>
+<stop offset="0.8643" stop-color="#7472E2"/>
+<stop offset="1" stop-color="#806EE3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1_384" x1="10.5981" y1="18.4223" x2="27.3885" y2="1.63198" gradientUnits="userSpaceOnUse">
+<stop offset="0.1183" stop-color="#0095D5"/>
+<stop offset="0.4178" stop-color="#3C83DC"/>
+<stop offset="0.6962" stop-color="#6D74E1"/>
+<stop offset="0.8333" stop-color="#806EE3"/>
+</linearGradient>
+<linearGradient id="paint2_linear_1_384" x1="-3.99639" y1="62.3812" x2="52.9432" y2="5.4416" gradientUnits="userSpaceOnUse">
+<stop offset="0.1075" stop-color="#C757BC"/>
+<stop offset="0.2138" stop-color="#D0609A"/>
+<stop offset="0.4254" stop-color="#E1725C"/>
+<stop offset="0.6048" stop-color="#EE7E2F"/>
+<stop offset="0.743" stop-color="#F58613"/>
+<stop offset="0.8232" stop-color="#F88909"/>
+</linearGradient>
+</defs>
+</svg>
