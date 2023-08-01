@@ -19,8 +19,8 @@ export default function Header() {
                         }}>
                 <Link href={"/"} style={{ textDecoration: 'none', color: 'inherit' }} className={rockSalt.className} >{"<Shane Jennings/>"}</Link>
             </Typography>
-            <Button color="inherit" sx={{fontWeight: 'bold'}}>Experience</Button>
-            <Button color="inherit" sx={{fontWeight: 'bold'}}>Projects</Button>
+            <Button color="inherit" sx={{fontWeight: 'bold'}} href={"/experience"}>Experience</Button>
+            <Button color="inherit" sx={{fontWeight: 'bold'}} href={"/projects"}>Projects</Button>
         </Toolbar>
     </AppBar>)
 }
