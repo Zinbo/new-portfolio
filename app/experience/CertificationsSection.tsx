@@ -15,34 +15,6 @@ export default function CertificationsSection() {
             </Box>
         </InnerBoxContainer>)
 
-    const Cert = ({children} : {children: ReactNode}) => (
-        <Box
-            sx={{
-                border: '1px solid #FFDE59',
-                p: 1,
-                flex: 1,
-            }}
-            bgcolor='background.default'
-        >
-            {children}
-        </Box>);
-
-    const Cert2 = ({title, imageName}: {title: string, imageName: string}) => (
-        <Box
-            sx={{
-                border: '1px solid #FFDE59',
-                p: 1,
-                flex: 1,
-                display: 'flex'
-            }}
-            bgcolor='background.default'
-        >
-            <Box sx={{display: 'flex', flexDirection: 'column'}} flex={1} >
-                <Box alignSelf="center" flex={1}><Image src={`/${imageName}.png`} alt={"article-image"} width={200} height={200}/></Box>
-                <Typography>{title}</Typography>
-            </Box>
-        </Box>);
-
     return (<BoxContainer>
         <Box display={'flex'} flex={1}>
             <Box flex={1} sx={{display: 'flex', flexDirection: 'column'}}>

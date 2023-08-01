@@ -1,7 +1,7 @@
 'use client';
 
 import './globals.css'
-import {Container, Grid, Paper} from "@mui/material";
+import {Container} from "@mui/material";
 import React from "react";
 import ThemeRegistry from "@/app/ThemeRegistry";
 import Header from "@/app/Header";
