@@ -17,7 +17,6 @@ export function InnerBoxContainer({children, id, sx}: Props) {
                 ...sx || {},
                 border: '1px solid #FFDE59',
                 p: 1,
-                alignSelf: 'flex-start',
                 display: 'flex'
             }}
             bgcolor='background.default'

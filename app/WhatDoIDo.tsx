@@ -26,7 +26,7 @@ export default function WhatDoIDo() {
                     </ul>
                 </Typography>
             </Box>
-            <InnerBoxContainer id={`${props.id}-icons`}>
+            <InnerBoxContainer id={`${props.id}-icons`} sx={{alignSelf: 'flex-start'}}>
                 <Box sx={{display: 'flex', flexDirection: 'column'}}>
                     { props.icons.map(row => (
                         <Box sx={{display: 'flex'}} key={row[0]}>

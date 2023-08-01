@@ -39,7 +39,7 @@ export default function Title() {
                             <li>Writer</li>
                         </ul>
                     </Typography>
-                    <InnerBoxContainer>
+                    <InnerBoxContainer sx={{ alignSelf: 'flex-start'}}>
                         {SocialMediaIcon("https://twitter.com/shanepjennings", TwitterIcon)}
                         {SocialMediaIcon("https://www.linkedin.com/in/shanepjennings/", LinkedInIcon)}
                         {SocialMediaIcon("https://github.com/Zinbo", GitHubIcon)}
