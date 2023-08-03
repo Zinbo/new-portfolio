@@ -1,12 +1,14 @@
 import React, {ReactNode} from "react";
 import Box from "@mui/material/Box";
-import {Grid} from "@mui/material";
+import {Grid, Theme} from "@mui/material";
+import {SxProps} from "@mui/system/styleFunctionSx";
 
 type Props = {
     children: ReactNode
+    sx?: SxProps<Theme>
 }
 
-export function BoxContainer({children}: Props) {
+export function BoxContainer({children, sx}: Props) {
 
     return (
         <Box
@@ -14,7 +16,9 @@ export function BoxContainer({children}: Props) {
                 display: 'flex',
                 flex: 1,
                 justifyContent: 'center',
-                my: 5
+                my: 5,
+                ...sx || {},
+
             }}
         >
             <Box

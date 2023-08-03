@@ -10,10 +10,11 @@ export default function WhatDoIDo() {
     const DevIcon = (name: string) => (<Box m={1}><Image
         src={`/${name}.svg`}
         alt={name}
-        height={'35'}
-        width={'35'}
+        width="0"
+        height="0"
+        sizes="100vw"
+        style={{ display: 'inline-block', width: '100%', height: '35px' }}
         priority
-        style={{display: 'inline-block'}}
     /></Box>);
 
     const Subsection = (props: {id: string, title: string, description: string[], icons: string[][]}) => {

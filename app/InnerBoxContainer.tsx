@@ -14,13 +14,14 @@ export function InnerBoxContainer({children, id, sx}: Props) {
     return (
         <Box
             sx={{
-                ...sx || {},
                 border: '1px solid #FFDE59',
                 p: 1,
-                display: 'flex'
+                display: 'flex',
+                ...sx || {},
             }}
             bgcolor='background.default'
             id={id}
+            className="inner-box"
         >
             {children}
         </Box>);

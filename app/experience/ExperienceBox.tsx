@@ -1,8 +1,6 @@
-import React, {ReactNode, RefObject, useRef} from "react";
+import React, {RefObject, useRef} from "react";
 import Box from "@mui/material/Box";
-import {SxProps} from "@mui/system/styleFunctionSx";
-import {styled, Theme, Typography} from "@mui/material";
-import {ExperienceBoxRight} from "@/app/experience/ExperienceBoxRIght";
+import {styled, Typography} from "@mui/material";
 
 type Props = {
     circleRefs: RefObject<SVGSVGElement>[]
