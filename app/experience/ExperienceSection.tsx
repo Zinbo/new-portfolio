@@ -1,9 +1,10 @@
 import {Box} from "@mui/system";
 import {Typography} from "@mui/material";
-import {BoxContainer} from "@/app/BoxContainer";
+import {BoxContainer} from "@/components/BoxContainer";
 import React, {RefObject} from "react";
 import {ExperienceBox} from "@/app/experience/ExperienceBox";
 import Xarrow from "react-xarrows";
+import Section from "@/components/Section";
 
 
 export default function ExperienceSection() {
@@ -31,10 +32,8 @@ export default function ExperienceSection() {
         return <>{lines}</>
     }
 
-    return (<BoxContainer>
-        <Box display={'flex'} flex={1}>
-            <Box flex={1} sx={{display: 'flex', flexDirection: 'column'}}>
-                <Typography variant="h2" sx={{fontWeight: 'bold'}}>Experience</Typography>
+    return (
+        <Section title="Experience">
                 <ExperienceBox title="J.P. Morgan" startDate='2020' endDate='present'
                                description={'Working in the Investment Banking space as an IC. Leading the upskilling effort of 40+ Java developers through Spotify\'s Chapter Model. Playing a pivotal role in architecting the move to cloud-native and the cloud.'}
                                leftAligned={true}
@@ -66,7 +65,5 @@ export default function ExperienceSection() {
                                circleRefs={circleRefs}
                 />
                 <Lines/>
-            </Box>
-        </Box>
-    </BoxContainer>)
+        </Section>)
 }
