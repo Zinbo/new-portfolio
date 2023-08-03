@@ -9,7 +9,7 @@ import Section from "@/components/Section";
 export default function LatestArticles() {
 
     const Article = () => (
-        <InnerBoxContainer id={`title-of-article`}>
+        <InnerBoxContainer id={`title-of-article`} sx={{p: 2}}>
             <Box sx={{display: 'flex', flexDirection: 'column'}}>
                 <Box id="article-image">
                     <Image src={"/article-placeholder-image.png"} alt={"article-image"} width={1000} height={1000}/>
