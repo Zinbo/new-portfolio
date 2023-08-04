@@ -1,5 +1,5 @@
 import {Box} from "@mui/system";
-import {styled, Typography} from "@mui/material";
+import {List, ListItem, styled, Typography} from "@mui/material";
 import {InnerBoxContainer} from "@/components/InnerBoxContainer";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";

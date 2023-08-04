@@ -13,8 +13,8 @@ export default function WhatDoIDo() {
                 <Box id={`${props.id}-description`} flexBasis={"50%"}>
                     <Typography variant="h4" sx={{fontWeight: 'bold'}}>{props.title}</Typography>
                     <Typography color="text.secondary">
-                        <ul>
-                            {props.description.map(d => (<li key={d}>{d}</li>))}
+                        <ul style={{paddingLeft: '20px'}}>
+                            {props.description.map(d => (<li key={d} style={{listStyleType: 'disc'}}><Typography fontWeight={"bold"}>{d}</Typography></li>))}
                         </ul>
                     </Typography>
                 </Box>

@@ -26,7 +26,17 @@ const nextConfig = {
         fileLoaderRule.exclude = /\.svg$/i
 
         return config
-    }
+    },
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'cdn.hashnode.com',
+                port: '',
+                pathname: '/res/hashnode/image/**',
+            },
+        ],
+    },
 }
 
 module.exports = nextConfig
