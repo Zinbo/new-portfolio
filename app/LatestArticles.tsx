@@ -17,14 +17,9 @@ export interface Article {
     views: number
 }
 
-export default function LatestArticles() {
-
-    const [articles, setArticles] = useState<Article[]>([]);
-
-    async function getArticles() {
-        console.log("Gonna get client data...")
-        const {data} = await client.query({
-            query: gql`
+async function getArticles() : Promise<Article[]> {
+    const {data} = await client.query({
+        query: gql`
              {
               user(username: "zinbo") {
                 publication {
@@ -41,16 +36,22 @@ export default function LatestArticles() {
               }
             }           
 `,
-        });
-        console.log(`Got data: ${data}`)
-        setArticles(data.user.publication.posts.slice(0, 3));
-    }
+    });
+    return data.user.publication.posts.slice(0, 3);
+}
+
+export default function LatestArticles() {
+
+    const [articles, setArticles] = useState<Article[]>([]);
+
+
 
 
     useEffect(() => {
-        console.log("In use effect...");
-        getArticles();
-        console.log("Finished use effect");
+        async function getData() {
+            setArticles(await getArticles());
+        }
+        getData();
     }, [])
 
 
