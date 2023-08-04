@@ -1,5 +1,5 @@
 import {Box} from "@mui/system";
-import {Typography} from "@mui/material";
+import {styled, Typography} from "@mui/material";
 import {InnerBoxContainer} from "@/components/InnerBoxContainer";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -11,21 +11,30 @@ import React from "react";
 import {OverridableComponent} from "@mui/material/OverridableComponent";
 import {SvgIconTypeMap} from "@mui/material/SvgIcon/SvgIcon";
 import Link from "next/link";
-
+import styles from './app.module.css'
+import DailydevIcon from '../public/dailydev.svg';
+import HashnodeIcon from '../public/hashnode.svg';
 export default function Title() {
 
-    const SocialMediaIcon = (url: string, Icon: OverridableComponent<SvgIconTypeMap>) => <Box mx={0.5}><Link href={url}
-                                                                                                             target="_blank"><Icon
-        fontSize="large"/></Link></Box>;
-    const CustomSocialMediaIcon = (url: string, imageSrc: string, alt: string) => (
-        <Box mx={0.5}><Link href={url} target="_blank"><Image
-            src={imageSrc}
-            alt={alt}
-            height={'35'}
-            width={'35'}
-            priority
-            style={{display: 'inline-block'}}
-        /></Link></Box>);
+    const withHoverEffect = (IconComponent: any) => styled(IconComponent)`
+    //color: black; /* Initial color of the icon */
+    transition: color 0.3s; /* Adding transition for smooth effect */
+
+    &:hover {
+        color: #FFDE59; /* Color on hover */
+    }`;
+
+    const SocialMediaIcon = (url: string, Icon: OverridableComponent<SvgIconTypeMap>) => (
+        <Box mx={0.5}>
+            <Link href={url} target="_blank">
+                {React.createElement(withHoverEffect(Icon), { fontSize: 'large' })}
+            </Link>
+        </Box>);
+    const CustomSocialMediaIcon = (url: string, Icon: any) => {
+        return (
+        <Box mx={0.5} ><Link href={url} target="_blank">
+            <Icon height="35" width="35" className={styles.something}/>
+        </Link></Box>)};
 
     return (
         <BoxContainer>
@@ -39,13 +48,13 @@ export default function Title() {
                             <li>Writer</li>
                         </ul>
                     </Typography>
-                    <InnerBoxContainer sx={{ alignSelf: 'flex-start'}}>
+                    <InnerBoxContainer sx={{alignSelf: 'flex-start'}}>
                         {SocialMediaIcon("https://twitter.com/shanepjennings", TwitterIcon)}
                         {SocialMediaIcon("https://www.linkedin.com/in/shanepjennings/", LinkedInIcon)}
                         {SocialMediaIcon("https://github.com/Zinbo", GitHubIcon)}
                         {SocialMediaIcon("mailto: shanepjennings@gmail.com", EmailIcon)}
-                        {CustomSocialMediaIcon("https://hashnode.com/@zinbo", "/hashnode.svg", "hashnode icon")}
-                        {CustomSocialMediaIcon("https://app.daily.dev/Zinbo", "/dailydev.svg", "dailydev icon")}
+                        {CustomSocialMediaIcon("https://hashnode.com/@zinbo", HashnodeIcon)}
+                        {CustomSocialMediaIcon("https://app.daily.dev/Zinbo", DailydevIcon)}
                     </InnerBoxContainer>
                 </Box>
                 <Box>

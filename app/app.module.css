@@ -1,0 +1,7 @@
+.something {
+    transition: color 0.3s;
+}
+
+.something:hover path {
+    fill: #FFDE59;
+}
