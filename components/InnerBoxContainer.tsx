@@ -7,9 +7,10 @@ type Props = {
     children: ReactNode
     id ?:string
     sx?: SxProps<Theme>
+    lineRef?: any
 }
 
-export function InnerBoxContainer({children, id, sx}: Props) {
+export function InnerBoxContainer({children, id, sx, lineRef}: Props) {
 
     return (
         <Grid container
@@ -22,6 +23,7 @@ export function InnerBoxContainer({children, id, sx}: Props) {
             bgcolor='background.default'
             id={id}
             className="inner-box"
+              ref={lineRef}
         >
             {children}
         </Grid>);
