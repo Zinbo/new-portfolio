@@ -9,7 +9,7 @@ type Props = {
 
 export default function Section({title, children} : Props) {
     return (<BoxContainer>
-            <Grid container direction={"column"}>
+            <Grid container direction={"column"} className="section">
                 <Typography alignSelf={"center"} variant="h2" sx={{fontWeight: 'bold', mb:2}}>{title}</Typography>
                 {children}
             </Grid>

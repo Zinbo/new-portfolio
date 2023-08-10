@@ -54,8 +54,8 @@ export default function LatestArticles() {
 
 
     const Article = ({data}: { data: Article }) => (
-        <Grid container item md={4} sm={6} xs={12}>
-            <InnerBoxContainer id={data.title}>
+        <Grid container item lg={4} md={6} sm={12} xs={12}>
+            <InnerBoxContainer id={data.title} sx={{p: 2}}>
                 <Box sx={{display: 'flex', flexDirection: 'column'}}>
                     <Box id="article-image">
                         <Image src={data.coverImage} alt={"article-image"} width={1000} height={1000}/>
