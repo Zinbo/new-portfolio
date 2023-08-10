@@ -1,6 +1,6 @@
 import React, {RefObject, useRef} from "react";
 import Box from "@mui/material/Box";
-import {styled, Typography} from "@mui/material";
+import {Grid, styled, Typography} from "@mui/material";
 
 type Props = {
     circleRefs: RefObject<SVGSVGElement>[]
@@ -11,8 +11,8 @@ type Props = {
     leftAligned: boolean
 }
 
-const ConvoBoxLeft = styled(Box)(({theme}) => ({
-    '&::after': {
+const ConvoBoxLeft = styled(Grid)(({theme}) => ({
+/*    '&::after': {
         content: '""',
         position: 'absolute',
         top: 'calc(50% - 10px)',
@@ -24,11 +24,11 @@ const ConvoBoxLeft = styled(Box)(({theme}) => ({
         borderBottom: 'inherit',
         borderRight: 'inherit',
         boxShadow: 'inherit'
-    },
+    },*/
 }));
 
-const ConvoBoxRight = styled(Box)(({theme}) => ({
-    '&::after': {
+const ConvoBoxRight = styled(Grid)(({theme}) => ({
+/*    '&::after': {
         content: '""',
         position: 'absolute',
         top: 'calc(50% - 10px)',
@@ -40,7 +40,7 @@ const ConvoBoxRight = styled(Box)(({theme}) => ({
         borderBottom: 'inherit',
         borderRight: 'inherit',
         boxShadow: 'inherit'
-    },
+    },*/
 }));
 
 export function ExperienceBox({title, startDate, endDate, description, leftAligned, circleRefs}: Props) {
@@ -53,26 +53,26 @@ export function ExperienceBox({title, startDate, endDate, description, leftAlign
             <circle cx="42" cy="42" r="41" fill="#1E293B" stroke="#FFDE59" stroke-width="2"/>
         </svg>);
 
-    return (<Box display={'flex'} alignItems={'center'} justifyContent={'space-evenly'}>
-        {!leftAligned && <Box flexBasis={'40%'}></Box>}
-        {!leftAligned && <Circle/>}
+    return (<Grid container alignItems={'center'} justifyContent={'center'}>
+        {!leftAligned && <Grid item sm={5.5} xs={0}></Grid>}
+        {!leftAligned && <Grid item xs={1} justifySelf={'center'} alignSelf={'center'} justifyContent={'center'}><Circle/></Grid>}
 
         <AlignedBox
             sx={{
                 flexDirection: 'column',
-                flexBasis: '40%',
                 border: '1px solid #FFDE59',
                 p: 2,
                 alignSelf: 'flex-start',
-                display: 'flex',
                 position: 'relative'
             }}
+            sm={5.5} xs={10}
+            item
             bgcolor='background.default'>
             <Typography variant="h4" sx={{fontWeight: 'bold'}}>{title}</Typography>
             <Typography color="text.secondary" sx={{fontWeight: 'bold'}}>{startDate} - {endDate}</Typography>
             <Typography>{description}</Typography>
         </AlignedBox>
-        {leftAligned && <Circle/>}
-        {leftAligned && <Box flexBasis={'40%'}></Box>}
-    </Box>);
+        {leftAligned && <Grid item xs={1} justifySelf={'center'} alignSelf={'center'} justifyContent={'center'}><Circle/></Grid>}
+        {leftAligned && <Grid item sm={5.5} xs={0}></Grid>}
+    </Grid>);
 }

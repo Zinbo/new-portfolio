@@ -1,6 +1,6 @@
 import React from "react";
 import {Box} from "@mui/system";
-import {Typography} from "@mui/material";
+import {Grid, Typography} from "@mui/material";
 import {InnerBoxContainer} from "@/components/InnerBoxContainer";
 import Section from "@/components/Section";
 import DevIcons from "@/components/DevIcons";
@@ -9,19 +9,21 @@ export default function WhatDoIDo() {
 
     const Subsection = (props: { id: string, title: string, description: string[], icons: string[] }) => {
         return (
-            <Box id={props.id} flex={1} sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
-                <Box id={`${props.id}-description`} flexBasis={"50%"}>
+            <Grid container id={props.id} justifyContent={"space-between"}>
+                <Grid item md={6} xs={12}>
                     <Typography variant="h4" sx={{fontWeight: 'bold'}}>{props.title}</Typography>
                     <Typography color="text.secondary">
                         <ul style={{paddingLeft: '20px'}}>
                             {props.description.map(d => (<li key={d} style={{listStyleType: 'disc'}}><Typography fontWeight={"bold"}>{d}</Typography></li>))}
                         </ul>
                     </Typography>
-                </Box>
-                <InnerBoxContainer id={`${props.id}-icons`} sx={{alignSelf: 'flex-start', flexBasis: '30%'}}>
-                    <DevIcons icons={props.icons} height={35}/>
-                </InnerBoxContainer>
-            </Box>)
+                </Grid>
+                <Grid item md={4} sm={props.icons.length > 10 ? 12 : "auto"} xs={12}>
+                    <InnerBoxContainer id={`${props.id}-icons`}>
+                        <DevIcons icons={props.icons} height={35}/>
+                    </InnerBoxContainer>
+                </Grid>
+            </Grid>)
     }
 
     return (

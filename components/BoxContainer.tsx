@@ -11,31 +11,18 @@ type Props = {
 export function BoxContainer({children, sx}: Props) {
 
     return (
-        <Box
+        <Grid
             sx={{
-                display: 'flex',
-                flex: 1,
                 justifyContent: 'center',
                 my: 5,
+                border: '2px solid #FFDE59',
+                p: 5,
                 ...sx || {},
 
             }}
+            bgcolor='background.paper'
         >
-            <Box
-                sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignSelf: 'center',
-                    position: 'relative',
-                    border: '2px solid #FFDE59',
-                    flex: 1,
-                    // flexBasis: '90%',
-                    p: 5
-                }}
-                bgcolor='background.paper'
-            >
-                {children}
-            </Box>
 
-        </Box>);
+                {children}
+        </Grid>);
 }
