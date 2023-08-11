@@ -1,20 +1,16 @@
 import React, {ReactNode} from "react";
-import Box from "@mui/material/Box";
 import {SxProps} from "@mui/system/styleFunctionSx";
 import {Grid, Theme} from "@mui/material";
-import {ResponsiveStyleValue} from "@mui/system";
-import {GridSpacing} from "@mui/material/Grid/Grid";
+import {GridProps} from "@mui/material/Grid/Grid";
 
-type Props = {
+interface Props extends GridProps {
     children: ReactNode
-    id?: string
     sx?: SxProps<Theme>
     lineRef?: any
-    spacing?: ResponsiveStyleValue<GridSpacing>
-    columnSpacing?: ResponsiveStyleValue<GridSpacing>
 }
 
-export function InnerBoxContainer({children, id, sx, lineRef, spacing, columnSpacing}: Props) {
+
+export function InnerBoxContainer({children, id, sx, lineRef, ...props}: Props) {
 
     return (
         <Grid container
@@ -24,11 +20,9 @@ export function InnerBoxContainer({children, id, sx, lineRef, spacing, columnSpa
                   ...sx || {},
               }}
               bgcolor='background.default'
-              id={id}
               className="inner-box"
               ref={lineRef}
-              spacing={spacing}
-              columnSpacing={columnSpacing}
+              {...props}
         >
             {children}
         </Grid>);

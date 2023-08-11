@@ -9,6 +9,7 @@ const epilogue = Epilogue({
 
 export const theme = createTheme({
     palette: {
+        mode: 'dark',
         primary: {
             light: '#FFDE59',
             main: '#001135',
