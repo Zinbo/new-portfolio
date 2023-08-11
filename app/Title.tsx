@@ -34,7 +34,7 @@ export default function Title() {
     const CustomSocialMediaIcon = (url: string, Icon: any) => {
         return (
             <Box mx={0.5}><Link href={url} target="_blank">
-                <Icon height="35" width="35" className={styles.something}/>
+                <Icon height="35" width="35" className={styles.customicon}/>
             </Link></Box>)
     };
 

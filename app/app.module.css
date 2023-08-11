@@ -1,7 +1,7 @@
-.something {
+.customicon {
     transition: color 0.3s;
 }
 
-.something:hover path {
+.customicon:hover path {
     fill: #FFDE59;
 }
