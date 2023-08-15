@@ -33,7 +33,10 @@ export default function WhatDoIDo() {
     return (
         <Section title={"What Do I Do?"}>
             <Subsection id="full-stack" title="Full Stack Development"
-                        description={["Build scalable, clean, cloud native back end applications", "Build responsive front end applications"]}
+                        description={[
+                            "Build all kinds of applications: back end, front end, full stack, mobile, whatever tool is required for the task.",
+                            "Build applications in a variety of different domains and languages, both in an enterprise setting and my own hobby projects.",
+                        ]}
                         icons={[
                             {fileName: "java", name: "Java"},
                             {fileName: "csharp", name: "C#"},
@@ -49,9 +52,8 @@ export default function WhatDoIDo() {
                             {fileName: "css3", name: "CSS3"}]}/>
             <Box sx={{mb: 5}}></Box>
             <Subsection id="architecture" title="Architecture"
-                        description={["Build Microservices, Monoliths, and everything in-between",
-                            "Build applications with techniques like Event Sourcing, DDD, CQRS, following industry standards",
-                            "Build cloud-native applications on AWS"]}
+                        description={["Build Microservices, Monoliths, and everything in-between, whatever is appropriate for the project.",
+                            "Build clean, scalable, reliable, and readable applications with techniques like Event Sourcing, DDD, CQRS, and other patterns."]}
                         icons={[
                             {fileName: "kube", name: "Kubernetes"},
                             {fileName: "docker", name: "Docker"},

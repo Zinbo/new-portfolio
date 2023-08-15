@@ -19,7 +19,6 @@ export default function ProjectsSection() {
             xs={12}
             item
             container
-
         >
             <Link href={url} target="_blank" style={{flex: 1}}>
                 <InnerBoxContainer sx={{
