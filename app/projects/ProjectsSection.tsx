@@ -28,9 +28,9 @@ export default function ProjectsSection() {
                     <Grid container item spacing={2}>
                         <Grid item container sm={12} md={4} justifyContent={{xs: "center", md: 'flex-start'}}
                               alignItems={'flex-start'}>
-                            <Image src={`/${imageName}.png`} width="341"
+                            <Image src={`/${imageName}.png`} width="1500"
                                    alt={imageName}
-                                   height="200"/>
+                                   height="1000"/>
                         </Grid>
                         <Grid container item direction={'column'} sm={12} md={8} gap={"10px"}>
                             <Typography sx={{fontWeight: 'bold'}} variant="h6">{title}</Typography>
@@ -61,7 +61,7 @@ export default function ProjectsSection() {
                          {fileName: "material-ui", name: "MUI"}
                      ]}
                      url={'https://drivingpassrate.co.uk/'}
-                     description="A Next.JS app which shows you closest driving test centres near you with the best pass rates, backed by GOV.UK data."/>
+                     description="Shows you closest driving test centres near you with the best pass rates, backed by GOV.UK data."/>
             <Project title="Portfolio" imageName="portfolio"
                      icons={[
                          {fileName: "typescript", name: "TypeScript"},
@@ -72,7 +72,7 @@ export default function ProjectsSection() {
                          {fileName: "figma", name: "Figma"}
                      ]}
                      url={'https://github.com/Zinbo/portfolio'}
-                     description="This portfolio was built using Next.JS and Material UI and designed in Figma."/>
+                     description="This portfolio was built using Next.JS and Material UI, and designed in Figma."/>
             <Project title="Wow Name Checker" imageName="wownamechecker"
                      url={'https://github.com/Zinbo/wow-name-checker'}
                      icons={[
@@ -90,7 +90,7 @@ export default function ProjectsSection() {
                          {fileName: "material-ui", name: "MUI"},
                          {fileName: "figma", name: "Figma"}
                      ]}
-                     description="Check if a name is available in World of Warcraft and receive an email when it is available."/>
+                     description="Check if a name is available in World of Warcraft for a specific realm and region. Subscribe to receive an email when the name becomes available."/>
             <Project title="Pokemon Catch" imageName="pokemoncatch"
                      url={'https://github.com/Zinbo/pokemon-catch'}
                      icons={[
@@ -105,7 +105,7 @@ export default function ProjectsSection() {
                          {fileName: "material-ui", name: "MUI"},
                          {fileName: "figma", name: "Figma"}
                      ]}
-                     description="A mobile app which tells you which Pokémon game has the best catch rate per Pokémon. Built using Android, Kotlin, Spring Boot, MongoDB, and the PokéAPI."/>
+                     description="Keep track of your entire pokemon collection, as well as find the easiest way to get new pokemon, tailored for games that you own."/>
         </Grid>
         <Button color="secondary" variant="contained" sx={{fontWeight: 'bold', alignSelf: 'center', mt: 3}}
                 href={"https://github.com/Zinbo?tab=repositories"} target="_blank">More Projects</Button>
