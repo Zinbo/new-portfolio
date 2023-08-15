@@ -11,7 +11,7 @@ export default function CertificationsSection() {
         <Grid container item md={4} sm={6} xs={12}>
             <InnerBoxContainer>
                 <Box sx={{display: 'flex', flexDirection: 'column'}} flex={1}>
-                    <Box alignSelf="center" flex={1}>
+                    <Box alignSelf="center">
                         <Image src={`/${imageName}.png`} alt={"article-image"} width={200} height={200}/>
                     </Box>
                     <Typography>{title}</Typography>

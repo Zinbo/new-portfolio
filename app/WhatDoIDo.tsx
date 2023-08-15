@@ -20,8 +20,8 @@ export default function WhatDoIDo() {
                         </ul>
                     </Typography>
                 </Grid>
-                <Grid item md={4} sm={props.icons.length > 10 ? 12 : "auto"} xs={12}>
-                    <InnerBoxContainer id={`${props.id}-icons`}>
+                <Grid item container md={4} xs={12} alignItems={"flex-start"}>
+                    <InnerBoxContainer id={`${props.id}-icons`} sm={props.icons.length > 10 ? 12 : "auto"} xs={12} md={12}>
                         <Grid container id={"inner-container"}>
                             <DevIcons icons={props.icons} height={35}/>
                         </Grid>

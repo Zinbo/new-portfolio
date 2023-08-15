@@ -1,5 +1,5 @@
 import {Box} from "@mui/system";
-import {Grid, List, ListItem, styled, Typography} from "@mui/material";
+import {Grid, styled, Typography} from "@mui/material";
 import {InnerBoxContainer} from "@/components/InnerBoxContainer";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -18,11 +18,10 @@ import HashnodeIcon from '../public/hashnode.svg';
 export default function Title() {
 
     const withHoverEffect = (IconComponent: any) => styled(IconComponent)`
-      //color: black; /* Initial color of the icon */
-      transition: color 0.3s; /* Adding transition for smooth effect */
+      transition: color 0.3s;
 
       &:hover {
-        color: #FFDE59; /* Color on hover */
+        color: #FFDE59;
       }`;
 
     const SocialMediaIcon = (url: string, Icon: OverridableComponent<SvgIconTypeMap>) => (
@@ -41,7 +40,7 @@ export default function Title() {
     return (
         <BoxContainer>
             <Grid container>
-                <Grid container item md={4} sm={"auto"} order={{md: 2, sm: 1}} justifyContent={{md:'flex-end', xs:'center'}} alignItems={'flex-start'}>
+                <Grid container item md={4} sm={12} order={{md: 2, sm: 1}} justifyContent={{md:'flex-end', xs:'center'}} alignItems={'flex-start'}>
                     <Image
                         src="/me.png"
                         alt="Profile Picture"
@@ -52,10 +51,10 @@ export default function Title() {
                     />
                 </Grid>
                 <Grid container item md={8} sm={12} order={{md: 1, sm: 2}}>
-                    <Grid item sm={12}>
+                    <Grid item container sm={12} justifyContent={{md:'flex-start', xs:'center'}}>
                         <Typography variant="h2" sx={{fontWeight: 'bold'}}>Shane Jennings</Typography>
                     </Grid>
-                    <Grid item sm={12}>
+                    <Grid item container sm={12} justifyContent={{md:'flex-start', xs:'center'}}>
                         <Typography variant="h4" sx={{fontWeight: 'bold'}} color="text.secondary">
                             <ul>
                                 <li>Full Stack Developer</li>
@@ -64,8 +63,8 @@ export default function Title() {
                             </ul>
                         </Typography>
                     </Grid>
-                    <Grid item sm={"auto"}>
-                        <InnerBoxContainer>
+                    <Grid item container xs={12} justifyContent={{md:'flex-start', xs:'center'}}>
+                        <InnerBoxContainer xs={"auto"}>
                             {SocialMediaIcon("https://twitter.com/shanepjennings", TwitterIcon)}
                             {SocialMediaIcon("https://www.linkedin.com/in/shanepjennings/", LinkedInIcon)}
                             {SocialMediaIcon("https://github.com/Zinbo", GitHubIcon)}

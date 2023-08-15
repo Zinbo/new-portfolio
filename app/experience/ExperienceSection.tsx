@@ -32,10 +32,6 @@ const jobs: Experience[] = [
         description: 'Worked on the game "Magic Duels", written in C++ using their own in-house games engine.'
     },
     {
-        title: "Stainless Games", startDate: '2014', endDate: '2014',
-        description: 'Worked on the game "Magic Duels", written in C++ using their own in-house games engine.',
-    },
-    {
         title: "Thales", startDate: '2011', endDate: '2012',
         description: 'Developed a green-field system to provide real-time traffic information to the public as well as an admin system used by National Highways.'
     },
