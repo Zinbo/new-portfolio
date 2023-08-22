@@ -42,7 +42,7 @@ export default function WhatDoIDo() {
                             {fileName: "csharp", name: "C#"},
                             {fileName: "typescript", name: "TypeScript"},
                             {fileName: "javascript", name: "JavaScipt"},
-                            {fileName: "Kotlin", name: "Kotlin"},
+                            {fileName: "kotlin", name: "Kotlin"},
                             {fileName: "spring", name: "Spring"},
                             {fileName: "hibernate", name: "Hibernate"},
                             {fileName: "react", name: "React"},
