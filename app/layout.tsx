@@ -28,6 +28,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
                   content="My portfolio - detailing my expertise, experience, projects, and certifications."/>
             <meta property="og:url" content="https://shanejennings.co.uk"/>
             <meta property="og:image" content="https://shanejennings.co.uk/me-512.png"/>
+            <title>Shane Jennings</title>
         </head>
         <body>
         <Script id="google-tag-manager" strategy="lazyOnload"
