@@ -24,7 +24,7 @@ export default function ProjectsSection() {
                 <InnerBoxContainer sx={{
                     p: 2, transition: "transform 0.15s ease-in-out",
                     ':hover': {transform: "scale3d(1.02, 1.02, 1)"}
-                }} >
+                }}>
                     <Grid container item spacing={2}>
                         <Grid item container sm={12} md={4} justifyContent={{xs: "center", md: 'flex-start'}}
                               alignItems={'flex-start'}>
@@ -34,7 +34,7 @@ export default function ProjectsSection() {
                         </Grid>
                         <Grid container item direction={'column'} sm={12} md={8} gap={"10px"}>
                             <Typography sx={{fontWeight: 'bold'}} variant="h6">{title}</Typography>
-                            <Typography>{description}</Typography>
+                            {description.split("\\n").map(line => <Typography key={line}>{line}</Typography>)}
                             <Box display="flex" flexWrap="wrap">
                                 <DevIcons icons={icons} height={50}/>
                             </Box>
@@ -52,6 +52,33 @@ export default function ProjectsSection() {
                      icons={[]}
                      url={'https://stacktobasics.com/'}
                      description="A blog which explains development concepts in a easy to understand format. Focuses on a range of topics, from front to back end and everything in-between. Built using the HashNode platform."/>
+            <Project title="My Wedding!"
+                     imageName="wedding"
+                     icons={[
+                         {fileName: "typescript", name: "TypeScript"},
+                         {fileName: "react", name: "React"},
+                         {fileName: "nextjs", name: "Next.js"},
+                         {fileName: "vercel", name: "Vercel"},
+                         {fileName: "mantine", name: "Mantine"},
+                         {fileName: "tailwind", name: "Tailwind CSS"},
+                         {fileName: "cloudinary", name: "Cloudinary"},
+                         {fileName: "formik", name: "Formik"},
+                         {fileName: "spotify", name: "Spotify"},
+                         {fileName: "figma", name: "Figma"}
+                     ]}
+                     url={'https://www.shaneandsarah.co.uk/'}
+                     description="I built my own wedding website which manages RSVPs, allows guests to add their own photos as well as view professional photos, and allows guests to add music which then gets added to a Spotify playlist"/>
+            <Project title="Erewash Valley Running Club"
+                     imageName="evrc"
+                     icons={[
+                         {fileName: "wordpress2", name: "WordPress"},
+                         {fileName: "php", name: "PHP"},
+                         {fileName: "figma", name: "Figma"}
+                     ]}
+                     url={'https://www.shaneandsarah.co.uk/'}
+                     description="I built the website for the Erewash Valley Running Club, of which I am a member, using Wordpress. \nI completely replaced their existing site, which was very slow and outdated, and live-swapped in the new version. \nThe new site has features such as seeing the
+                     upcoming events, races, newsletters, and results. It provides an easy way for Admins to upload the data for these items. \nI also created my own PHP plugin for converting Wordpress Classic pages into the newer Blocks format so I could port over existing pages.
+                     I wrote my own custom PHP code for showing the latest events, races, newsletters, and results, as well as highlighting items which had marked as featured."/>
             <Project title="Driving Pass Rate" imageName="drivingpassrate"
                      icons={[
                          {fileName: "typescript", name: "TypeScript"},
